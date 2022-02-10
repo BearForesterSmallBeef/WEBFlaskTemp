@@ -26,5 +26,11 @@ def news():
     return render_template("news.html", news=news_list)
 
 
+@app.route("/queue")
+def queue():
+    param = {"title": "Очередь"}
+    return render_template("queue.html", **param)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
